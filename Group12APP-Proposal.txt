@@ -1,0 +1,86 @@
+Group Project group 12
+
+DAY 1
+research APIs
+    pull data and display on page
+
+
+Create sketch of the design/layout and pseudocode
+    Project Proposal
+        Project Title 
+        Team Members
+        Project description
+        Sketch of the design
+        APIs to be used
+        Rough breakdown of tasks
+
+Potential APIs
+    Air Quality and weather data
+    Energy Production photovoltaic energy systems
+    Non profit charity data
+    Eventbtrite or ticketmaster
+    Food and Drink Categories (recipies, restaurants, alcohol, recipies)
+    Geocoding 
+    Government Data (census.gov)
+    Colorado Data Engine
+    Health (doctors in local area, influenza-like symptoms in the area)
+    News (NYT, historical articles)
+    Marijuy
+    Skyscanner flight search and world currency along with google maps
+    E-sports search and youtube  and google maps
+    Random famous quotes, google search/wikipedia, google maps, tourism
+    US national parks
+    data.ny.gov
+    Numbers trivia
+    Crime data
+        
+Project Ideas:
+    1.
+    2.
+    3.
+
+
+
+    Requirements
+        use at least 2 APIs
+        use AJAX to pull data
+        Use at least one new library or technology that we havent discussed
+        Create a polished front end/UI
+        Meet good quality coding standards (indentation, scoping, naming, ets)
+        no alerts, confirms, or prompts (look into Modals)
+        incorporate some sort of repeating element (table, columns, ets.)
+        Use bootstrap or an alternateive CSS framework
+        Deploy your sire to GitHub Pages
+        Include user input validation. 
+        Bonus
+            use firebase for persistent data storage
+            make site mobile responsive
+            use an alternative CSS framework such as Materialize
+            
+        Metrics
+            Concept
+            Design
+            Functionality
+            Collaboration
+            Presentation
+        
+
+Day 2
+Develop the Project
+
+Day 3
+continue project Develop
+
+Day 4
+continue prject Develop 
+
+day 5
+prep for presentation
+
+day 6
+Presentations
+
+
+
+
+john
