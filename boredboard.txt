@@ -1,6 +1,10 @@
 MVP:
-1.	General Idea – find out a high level view of what you want to do. Online code editor +stac overflow answers
-2.	Target audience – US? Developers who need help while coding
-3.	Problem being solved – Developers lose time switching between browser and code editor
+1.	General Idea – We want the user to be able to enter a few bits of information that would provide them activities to enrich their lives.
+
+2.	Target audience – Users seeking new and unique hobbies they normally would not seek out.
+
+3.	Problem being solved – This would provide more culture and enrich users lives to put them out of their comfort zone. They would be able to serach locally so that they would not enter a geographical area they may not want to be in.
+
 4.	Primary goal of product – Remove the need to switch – surface stack overflow answers in real time based on code being written.
+
 5.	Identify and prioritize user stories A user story is something that can use problem solving into actionable items and make sure that you’re adding value instead of features. 
