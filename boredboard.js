@@ -19,8 +19,9 @@ var where = $("#where")
 
 var radius = $("#radius")
 
-var queryURL = "http://api.eventful.com/json/events/search?keywords="+ what +"&l="+ where +"&within"+ radius +"&units=miles&app_key=fcb8bhZMVpHTfWJV"
+// var queryURL = "http://api.eventful.com/json/events/search?keywords="+ what +"&l="+ where +"&within"+ radius +"&units=miles&app_key=fcb8bhZMVpHTfWJV"
 
+var queryURL = "http://api.eventful.com/json/events/search?keywords=music&l=10036&within1&units=miles&app_key=fcb8bhZMVpHTfWJV"
 
 
 $.ajax({
@@ -30,7 +31,7 @@ $.ajax({
 }) .then(function (response){
     console.log(response)
         
-    for (var i = 0; i < response; i++){
+    for (var i = 0; i < response.length; i++){
         console.log(response.events.event[i])
     }
 });
