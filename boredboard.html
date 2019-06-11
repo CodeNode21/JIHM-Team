@@ -16,9 +16,11 @@
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
 
+    
 </head>
 
 <body>
+    
     <!-- we will use this container for the whole page, follow the div! -->
     <div class="container">
 
@@ -30,25 +32,34 @@
         </div>
         </div>
         
-        <!-- We will use a form here -->
+        <!-- We will use a form here, for eventful, remember WHAT WHERE WHEN -->
               <form>
+                <!-- This will be the what, aka q/keywords, this will be used to search by any aspect of an event that is not part of the category, location, or time -->
+                <div class="form-group">
+                    <label for="What">What event are you looking for?</label>
+                    <input type="whatevent" class="form-control" id="what" placeholder="dancing, billiards, biking, etc">
+                </div>
+
                   <!-- This is where the user will enter the zip code -->
                 <div class="form-group">
-                  <label for="Zip Code">Zip Code</label>
-                  <input type="zipcode" class="form-control" id="10036" aria-describedby="emailHelp" placeholder="Enter email">
+                  <label for="Zip Code">Where do you want the event to be?</label>
+                  <input type="zipcode" class="form-control" id="where" aria-describedby="emailHelp" placeholder="zip code, region, city">
+                  
                   <!-- This will be a comment underneath the zip code entry box -->
                   <small id="emailHelp" class="form-text text-muted">You should be excited!</small>
                 </div>
 
+
+
                 <!-- This is where the user will enter the radius -->
                 <div class="form-group">
                     <label for="pwd">Radius</label>
-                    <select id="article-count" class="custom-select" aria-labelledby="dropdownMenuButton">
+                    <select id="radius" class="custom-select" aria-labelledby="dropdownMenuButton">
                         <!-- Setting the option for 1 as default, listing 1-10 miles -->
                       <option selected value="1" selected>1</option> 
                       <option value=2>2</option>
                       <option value=3>3</option>  
-                      <option value=4>4</option>                   
+                      <option value=4>4</option>                     
                       <option value=5>5</option>
                       <option value=6>6</option>
                       <option value=7>7</option>
@@ -57,6 +68,7 @@
                       <option value="10">10</option>
                     </select>
                   </div>
+
                 <div class="form-check">
                   <input type="checkbox" class="form-check-input" id="exampleCheck1">
                   <label class="form-check-label" for="exampleCheck1">Let's find something to do!</label>
@@ -78,6 +90,9 @@
                     </h6>
                   </div>
               </div>
+              
+
+
     </div>
 
    <!-- jQuery JS -->
