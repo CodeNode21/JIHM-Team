@@ -12,28 +12,63 @@ function buildQueryURL() {
 
 
 }
+// initial entries
+var what = "";
+var where = "";
+var radius = "";
 
-var what = $("#what")
+// capture button click
+$("#button").on("click", function (event) {
+    // this prevents from relaoding the page
+    event.preventDefault()
 
-var where = $("#where")
+    // This should grab the values?
+    var what = $("#what").val()
+    console.log(what)
 
-var radius = $("#radius")
+    var where = $("#where").val()
+    console.log(where)
+
+    var radius = $("#radius").val()
+    console.log(radius)
+
+    var queryURL = "http://api.eventful.com/json/events/search?keywords="+ what +"&l="+ where +"&within"+ radius +"&units=miles&app_key=fcb8bhZMVpHTfWJV"
+console.log(queryURL)
+
+
+
+    $.ajax({
+        url:queryURL,
+        method: "GET",
+        dataType:'jsonp'
+    }) .then(function (response){
+        console.log(response)
+            
+        for (var i = 0; i < response.length; i++){
+            console.log(response.events[i])
+        }
+    });
+})
+
+
+
 
 // var queryURL = "http://api.eventful.com/json/events/search?keywords="+ what +"&l="+ where +"&within"+ radius +"&units=miles&app_key=fcb8bhZMVpHTfWJV"
+// console.log(queryURL)
 
-var queryURL = "http://api.eventful.com/json/events/search?keywords=music&l=10036&within1&units=miles&app_key=fcb8bhZMVpHTfWJV"
+// var queryURL = "http://api.eventful.com/json/events/search?keywords=music&l=10036&within1&units=miles&app_key=fcb8bhZMVpHTfWJV"
 
 
-$.ajax({
-    url:queryURL,
-    method: "GET",
-    dataType:'jsonp'
-}) .then(function (response){
-    console.log(response)
+// $.ajax({
+//     url:queryURL,
+//     method: "GET",
+//     dataType:'jsonp'
+// }) .then(function (response){
+//     console.log(response)
         
-    for (var i = 0; i < response.length; i++){
-        console.log(response.events.event[i])
-    }
-});
+//     for (var i = 0; i < response.length; i++){
+//         console.log(response.events[i])
+//     }
+// });
 
 console.log("123123123")
