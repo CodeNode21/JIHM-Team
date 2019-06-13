@@ -2,20 +2,7 @@
 // https://api.eventful.com/docs
 // https://api.eventful.com/libs/javascript/
 
-function buildQueryURL() {
-    // queryURL is the url we will use to search the API
-    var queryURL = "http://api.eventful.com/json/events/?q=music&l=10018&within10&units=miles&app_key=fcb8bhZMVpHTfWJV"
 
-    // here is the application key
-
-    // http://api.eventful.com/rest/events/search?...&keywords=books&location=San+Diego&date=Future
-
-
-}
-// initial entries
-var what = "";
-var where = "";
-var radius = "";
 
 // capture button click
 $("#button").on("click", function (event) {
@@ -33,28 +20,53 @@ $("#button").on("click", function (event) {
     console.log(radius)
 
     var queryURL = "http://api.eventful.com/json/events/search?keywords="+ what +"&l="+ where +"&within"+ radius +"&units=miles&app_key=fcb8bhZMVpHTfWJV"
-console.log(queryURL)
+    console.log(queryURL)
 
 
-
+// What is teh datatype used for? This is new?
     $.ajax({
         url:queryURL,
         method: "GET",
         dataType:'jsonp'
     }) .then(function (response){
-        console.log(response)
-            
-        for (var i = 0; i < response.length; i++){
-            console.log(response.events[i])
-
-    
+        console.log(response.events.event)
         
+        var eventList = $("<ul>");
+        eventList.addClass("list-group");
+
+        for (var i = 0; i < response.events.event.length; i++){
+            console.log(response.events.event[i])
+            // console.log(response.events[i])
+
+            eventsToHtml(response.events.event[i])
+            
         }
     });
 })
 
+function eventsToHtml(data){
+    // console.log(data)
+
+    if (data.image){
+        var image = data.image.small.url
+    } else {
+        var image = "https://via.placeholder.com/150"
+
+    }
+    
+    var title = data.title
+    var date = data.start_time
+
+    var div = $("<div>");
+    div.html(`<div><div class="row"><div class="col-4"><img src="${image}" alt="" class="card-image"></div><div class="col-8"><h2>"${title}"</h2><h3>"${date}"</h3></div></div></div>`)
+
+    $("section").append(div);
+
+    // add conditional statement for if null for image
+}
 
 
 
 
-console.log("123123123")
+
+
