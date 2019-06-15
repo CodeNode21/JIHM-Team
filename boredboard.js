@@ -56,9 +56,11 @@ function eventsToHtml(data){
     
     var title = data.title
     var date = data.start_time
+    var url = data.url
+    
 
     var div = $("<div>");
-    div.html(`<div><div class="row"><div class="col-4"><img src="${image}" alt="" class="card-image"></div><div class="col-8"><h2>"${title}"</h2><h3>"${date}"</h3></div></div></div>`)
+    div.html(`<div><div class="row"><div class="col-4"><img src="${image}" alt="" class="card-image"></div><div class="col-8"><h2>"${title}"</h2><h3>"${date}"</h3><h4>"${href = url}</div></div></div>`)
 
     $("section").append(div);
 
