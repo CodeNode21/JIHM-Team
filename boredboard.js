@@ -19,7 +19,7 @@ $("#button").on("click", function (event) {
     var radius = $("#radius").val()
     console.log(radius)
 
-    var queryURL = "https://api.eventful.com/json/events/search?keywords="+ what +"&l="+ where +"&within"+ radius +"&units=miles&app_key=fcb8bhZMVpHTfWJV"
+    var queryURL = "http://api.eventful.com/json/events/search?keywords="+ what +"&l="+ where +"&within"+ radius +"&units=miles&app_key=fcb8bhZMVpHTfWJV"
     console.log(queryURL)
 
     
