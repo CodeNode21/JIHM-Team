@@ -19,8 +19,12 @@ $("#button").on("click", function (event) {
     var radius = $("#radius").val()
     console.log(radius)
 
-    var queryURL = "https://api.eventful.com/json/events/search?keywords="+ what +"&l="+ where +"&within"+ radius +"&units=miles&app_key=fcb8bhZMVpHTfWJV"
+    var queryURL = "http://api.eventful.com/json/events/search?keywords="+ what +"&l="+ where +"&within"+ radius +"&units=miles&app_key=fcb8bhZMVpHTfWJV"
     console.log(queryURL)
+
+    
+
+
 
 
 // What is teh datatype used for? This is new?
@@ -29,7 +33,7 @@ $("#button").on("click", function (event) {
         method: "GET",
         dataType:'jsonp'
     }) .then(function (response){
-        console.log(response.events.event)
+        console.log(response.events.event[0])
         
         var eventList = $("<ul>");
         eventList.addClass("list-group");
@@ -48,7 +52,7 @@ function eventsToHtml(data){
     // console.log(data)
 
     if (data.image){
-        var image = data.image.small.url
+        var image = data.image.medium.url
     } else {
         var image = "https://via.placeholder.com/150"
 
@@ -66,6 +70,37 @@ function eventsToHtml(data){
 
     // add conditional statement for if null for image
 }
+
+// var queryTimeURL = "http://worldclockapi.com/api/json/est/now";
+// console.log(queryTimeURL);
+
+// // $.ajax({
+//     "$id": "1",
+//     "currentDateTime": "2019-06-15T10:28-04:00",
+//     "utcOffset": "-04:00:00",
+//     "isDayLightSavingsTime": true,
+//     "dayOfTheWeek": "Saturday",
+//     "timeZoneName": "Eastern Standard Time",
+//     "currentFileTime": 132050681317363790,
+//     "ordinalDate": "2019-166",
+//     "serviceResponse": null
+//     })
+
+var span = document.getElementById('footer');
+
+function time() {
+  var d = new Date();
+  var s = d.getSeconds();
+  var m = d.getMinutes();
+  var h = d.getHours();
+  span.textContent = h + ":" + m + ":" + s;
+}
+
+setInterval(time, 1000);
+
+
+
+    
 
 
 
