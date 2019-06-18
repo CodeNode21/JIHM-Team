@@ -107,10 +107,7 @@ setInterval(time, 1000);
 // App product page 
 // App URL
 
-// Client secret
-// 5NNULRWCDCDGGIXIH2DDUVODDSFUYGLHFUBL3RN3FWOMVUXX4R
-// Private API key
-// MNV7SEZGNRZKXNQXKSEF
+
 // Public API key
 // E35HN42CJGH4744CTNPX
 
