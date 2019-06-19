@@ -122,8 +122,12 @@ setInterval(time, 1000);
 
 
 // BORED AIP
-var URL = "http://www.boredapi.com/api/";
+var boredURL = "http://www.boredapi.com/api/";
 var activityType = ["education", "recreational", "social", "diy", "charity", "cooking", "relaxation", "music", "busywork"];
+// create a random button as well as buttons for activity types 
+// event listener below. 
+$("")
+
 // Description of the queried activity
 // accessibility
 // A factor describing how possible an event is to do with zero being the most accessible
