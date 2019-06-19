@@ -137,7 +137,31 @@ setInterval(time, 1000);
 // /users/me/ = Shows information about the current user (i.e. you)
 
 // /users/me/events  = Displays a list of Events you can manage
-    
+
+
+// BORED AIP
+var boredURL = "http://www.boredapi.com/api/";
+var activityType = ["education", "recreational", "social", "diy", "charity", "cooking", "relaxation", "music", "busywork"];
+// create a random button as well as buttons for activity types 
+// event listener below. 
+$("")
+
+// Description of the queried activity
+// accessibility
+// A factor describing how possible an event is to do with zero being the most accessible
+// [0.0, 1.0]
+// type
+// Type of the activity
+// ["education", "recreational", "social", "diy", "charity", "cooking", "relaxation", "music", "busywork"]
+// participants
+// The number of people that this activity could involve
+// [0, n]
+// price
+// A factor describing the cost of the event with zero being free
+// [0, 1]
+// key
+// A unique numeric id
+// [1000000, 9999999]
 
 
 
