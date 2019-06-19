@@ -112,4 +112,36 @@ function time() {
 }
 
 setInterval(time, 1000);
+<<<<<<< HEAD
 }
+=======
+
+
+// API Key Name	Keys	Actions
+// BoredBoard
+// HMNEI5LA6MRBDVOWA3
+// Show client secret and API keys
+// API key details
+// App product page 
+// App URL
+
+
+// Public API key
+// E35HN42CJGH4744CTNPX
+
+
+// url base :
+// 	https://www.eventbriteapi.com/v3
+// GET
+
+// /users/me/ = Shows information about the current user (i.e. you)
+
+// /users/me/events  = Displays a list of Events you can manage
+    
+
+
+
+
+
+
+>>>>>>> 474f3335ffe2f611989efdc40577cec56b12b924
