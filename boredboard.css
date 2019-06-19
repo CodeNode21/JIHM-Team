@@ -5,5 +5,15 @@ body {
    }
 
 #thechalkboard {
-    background-image: url("https://cdn.shopify.com/s/files/1/1799/9277/products/chalkboard-childrens-wallpaper_530x.jpg?v=1554820006");
+    background-image: url("https://cdn.shopify.com/s/files/1/2675/9056/products/lanter2_2048x.jpg?v=1515699000");
+    align-items: center;
+}
+
+html body {
+    background-image: url("https://i.pinimg.com/originals/7f/22/bd/7f22bd1107b49b5eac20ce21b80d6489.jpg")
+
+}
+
+#centered {
+    text-align: center;
 }

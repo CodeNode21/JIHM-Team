@@ -27,7 +27,7 @@ $("#button").on("click", function (event) {
 
 
 
-// What is teh datatype used for? This is new?
+// This is the AJAX request. The 'p' at the end of jsonp is just a hack so that the request actually works. 
     $.ajax({
         url:queryURL,
         method: "GET",
@@ -37,11 +37,13 @@ $("#button").on("click", function (event) {
         
         var eventList = $("<ul>");
         eventList.addClass("list-group");
-
+    
+    // We use a for-loop here to create an array of the results. 
         for (var i = 0; i < response.events.event.length; i++){
             console.log(response.events.event[i])
             // console.log(response.events[i])
 
+            // COme back to this to review
             eventsToHtml(response.events.event[i])
             
         }
@@ -49,27 +51,40 @@ $("#button").on("click", function (event) {
 })
 
 function eventsToHtml(data){
-    // console.log(data)
+    console.log(eventsToHtml)
 
     if (data.image){
-        var image = data.image.medium.url
+        var image = "http:"+data.image.medium.url
+        console.log(image)
     } else {
-        var image = "https://via.placeholder.com/150"
+        var image = "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500"
 
     }
     
     var title = data.title
     var date = data.start_time
-    var url = data.url
+    var url = data.url 
     
 
-    var div = $("<div>");
-    div.html(`<div><div class="row"><div class="col-4"><img src="${image}" alt="" class="card-image"></div><div class="col-8"><h2>"${title}"</h2><h3>"${date}"</h3><h4>"${href = url}</div></div></div>`)
+var div = $("<div>");
+div.html(`<div>
+<div class="card" "col-4">
+<div class="card-body" >
+<img src="${image}" alt="" class="card-image">
+</div>
+<div class="col-4">
+<h2>"${title}"</h2>
+<h3>"${date}"</h3>
+<h4><a href=${url} class="card-link">${title}</a></h4>
+</div>
+</div>
+</div>`)
+
+
 
     $("section").append(div);
 
-    // add conditional statement for if null for image
-}
+
 
 // var queryTimeURL = "http://worldclockapi.com/api/json/est/now";
 // console.log(queryTimeURL);
@@ -97,13 +112,4 @@ function time() {
 }
 
 setInterval(time, 1000);
-
-
-
-    
-
-
-
-
-
-
+}
