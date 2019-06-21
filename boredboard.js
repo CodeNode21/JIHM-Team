@@ -2,29 +2,23 @@
 // https://api.eventful.com/docs
 // https://api.eventful.com/libs/javascript/
 
-
-
 // capture button click
 $("#button").on("click", function (event) {
     // this prevents from relaoding the page
-    event.preventDefault()
+    event.preventDefault();
 
     // This should grab the values?
-    var what = $("#what").val()
-    console.log(what)
+    var what = $("#what").val();
+    console.log(what);
 
-    var where = $("#where").val()
-    console.log(where)
+    var where = $("#where").val();
+    console.log(where);
 
-    var radius = $("#radius").val()
-    console.log(radius)
+    var radius = $("#radius").val();
+    console.log(radius);
 
     var queryURL = "https://api.eventful.com/json/events/search?keywords="+ what +"&l="+ where +"&within"+ radius +"&units=miles&app_key=fcb8bhZMVpHTfWJV"
-    console.log(queryURL)
-
-    
-
-
+    console.log(queryURL);
 
 
 // This is the AJAX request. The 'p' at the end of jsonp is just a hack so that the request actually works. 
@@ -48,73 +42,71 @@ $("#button").on("click", function (event) {
             
         }
     });
-})
+});
 
 function eventsToHtml(data){
-    console.log(eventsToHtml)
+    console.log(eventsToHtml);
 
     if (data.image){
         var image = "http:"+data.image.medium.url
         console.log(image)
     } else {
         var image = "https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500"
-
-    }
+    };
     
-    var title = data.title
-    var date = data.start_time
-    var url = data.url 
+    var title = data.title;
+    var date = data.start_time;
+    var url = data.url;
     
-
-var div = $("<div>");
-div.html(`<div>
-<div class="card" "col-4">
-<div class="card-body" >
-<img src="${image}" alt="" class="card-image">
-</div>
-<div class="col-4">
-<h2>"${title}"</h2>
-<h3>"${date}"</h3>
-<h4><a href=${url} class="card-link">${title}</a></h4>
-</div>
-</div>
-</div>`)
-
-
-
+    
+    var div = $("<div>");
+    div.html(`<div>
+    <div class="card" "col-4">
+    <div class="card-body" >
+    <img src="${image}" alt="" class="card-image">
+    </div>
+    <div class="col-4">
+    <h2>"${title}"</h2>
+    <h3>"${date}"</h3>
+    <h4><a href=${url} class="card-link">${title}</a></h4>
+    </div>
+    </div>
+    </div>`);
+    
+    
+    
     $("section").append(div);
-
-
-
-// var queryTimeURL = "http://worldclockapi.com/api/json/est/now";
-// console.log(queryTimeURL);
-
-// // $.ajax({
-//     "$id": "1",
-//     "currentDateTime": "2019-06-15T10:28-04:00",
-//     "utcOffset": "-04:00:00",
-//     "isDayLightSavingsTime": true,
-//     "dayOfTheWeek": "Saturday",
-//     "timeZoneName": "Eastern Standard Time",
+    
+    
+    
+    // var queryTimeURL = "http://worldclockapi.com/api/json/est/now";
+    // console.log(queryTimeURL);
+    
+    // // $.ajax({
+        //     "$id": "1",
+        //     "currentDateTime": "2019-06-15T10:28-04:00",
+        //     "utcOffset": "-04:00:00",
+        //     "isDayLightSavingsTime": true,
+        //     "dayOfTheWeek": "Saturday",
+        //     "timeZoneName": "Eastern Standard Time",
 //     "currentFileTime": 132050681317363790,
 //     "ordinalDate": "2019-166",
 //     "serviceResponse": null
 //     })
 
+// added } below
+}
 var span = document.getElementById('footer');
 
 function time() {
-  var d = new Date();
+    var d = new Date();
   var s = d.getSeconds();
   var m = d.getMinutes();
   var h = d.getHours();
   span.textContent = h + ":" + m + ":" + s;
-}
+};
 
 setInterval(time, 1000);
-<<<<<<< HEAD
-}
-=======
 
 
 // API Key Name	Keys	Actions
@@ -144,7 +136,16 @@ var boredURL = "http://www.boredapi.com/api/";
 var activityType = ["education", "recreational", "social", "diy", "charity", "cooking", "relaxation", "music", "busywork"];
 // create a random button as well as buttons for activity types 
 // event listener below. 
-$("")
+$("#boredAPI").on("click", function(event){
+    event.preventDefault();
+    for(var i = 0; i < activityType.length; i++){
+		//create a button for each activity type
+        $(".types").append("<button type='submit' id='actType'>"+activityType[i]+"</button>")
+    };
+        var buttonClicked = $("#actType").on("click", function(event){
+            event.preventDefault();
+    });
+});
 
 // Description of the queried activity
 // accessibility
@@ -168,4 +169,3 @@ $("")
 
 
 
->>>>>>> 474f3335ffe2f611989efdc40577cec56b12b924
