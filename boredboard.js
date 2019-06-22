@@ -140,13 +140,14 @@ $("#boredAPI").on("click", function(event){
     $(".types").empty();
     for(var i = 0; i < activityType.length; i++){
 		//create a button for each activity type
-        $(".types").append("<button type='submit' id='actType'>"+activityType[i]+"</button>")
+        $(".types").append("<button type='submit' value='"+activityType[i]+"'>"+activityType[i]+"</button>")
     };
-        $("<button.actType>").on("click", function(event){
+        $("button").on("click", function(event){
             event.preventDefault();
-            var type = $("<button.actType>").html();
-            console.log(type);
-            var boredPull = boredURL + type;
+            var buttonVal = $(this).text();
+            
+            console.log(buttonVal);
+            var boredPull = boredURL + buttonVal;
             console.log(boredPull);
             $.ajax({
                 url:boredPull,
