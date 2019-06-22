@@ -9,14 +9,16 @@ body {
 
 #thechalkboard {
     background-image: url("https://st2.depositphotos.com/3316741/10258/i/950/depositphotos_102585688-stock-photo-floral-card-with-pink-flowers.jpg");
+    background-size: 75%;
     align-items: center;
     border: solid 5px;
     border-radius: 25px; 
+    margin-top: 25px;
 }
 
 html body {
     /* background-image: url("https://i.pinimg.com/originals/7f/22/bd/7f22bd1107b49b5eac20ce21b80d6489.jpg") */
-    background-image: url("https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.baltana.com%2Ffiles%2Fwallpapers-1%2FYellow-Background-Wallpapers-03578.jpg&f=1")
+    background-image: url("https://static.vecteezy.com/system/resources/previews/000/093/696/original/vector-yellow-abstract-background.jpg")
 }
 
 #centered {
