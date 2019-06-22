@@ -26,4 +26,18 @@ html body {
 }
 button{
     margin-top: 5px;
+    border-radius: 15px;
+}
+#activity{
+    background-color: #008f95;
+    color: #eb3e80;
+    padding: 5px;
+    border: solid 5px;
+    border-radius: 25px; 
+    text-align: center;
+}
+div.card{
+    border: solid 5px;
+    border-radius: 25px; 
+    background-color: 
 }

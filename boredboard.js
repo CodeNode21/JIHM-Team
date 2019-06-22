@@ -59,7 +59,7 @@ function eventsToHtml(data){
     
     
     var div = $("<div>");
-    div.html(`<div>
+    div.html(`<div class='animate slideInRight'>
     <div class="card" "col-4">
     <div class="card-body" >
     <img src="${image}" alt="" class="card-image">
@@ -140,7 +140,7 @@ $("#boredAPI").on("click", function(event){
     $(".types").empty();
     for(var i = 0; i < activityType.length; i++){
 		//create a button for each activity type
-        $(".types").append("<button type='submit' value='"+activityType[i]+"'>"+activityType[i]+"</button>")
+        $(".types").append("<button type='submit' value='"+activityType[i]+"'>" + activityType[i]+"</button>")
     };
         $("button").on("click", function(event){
             event.preventDefault();
@@ -154,7 +154,7 @@ $("#boredAPI").on("click", function(event){
                 method: "GET",
             }).then(function(response){
                 console.log(response.activity)
-                $(".types").append("<p id='activity'>" + response.activity + "</p>");
+                $(".types").append("<p class='animated bounceInLeft' id='activity'>" + response.activity + "</p>");
             })
 
     });
