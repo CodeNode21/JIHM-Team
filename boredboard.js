@@ -46,7 +46,6 @@ $("#button").on("click", function (event) {
 
 function eventsToHtml(data){
     console.log(eventsToHtml);
-
     if (data.image){
         var image = "http:"+data.image.medium.url
         console.log(image)
@@ -132,18 +131,31 @@ setInterval(time, 1000);
 
 
 // BORED AIP
-var boredURL = "http://www.boredapi.com/api/";
+var boredURL = "http://www.boredapi.com/api/activity?type=";
 var activityType = ["education", "recreational", "social", "diy", "charity", "cooking", "relaxation", "music", "busywork"];
 // create a random button as well as buttons for activity types 
 // event listener below. 
 $("#boredAPI").on("click", function(event){
     event.preventDefault();
+    $(".types").empty();
     for(var i = 0; i < activityType.length; i++){
 		//create a button for each activity type
         $(".types").append("<button type='submit' id='actType'>"+activityType[i]+"</button>")
     };
-        var buttonClicked = $("#actType").on("click", function(event){
+        $("<button.actType>").on("click", function(event){
             event.preventDefault();
+            var type = $("<button.actType>").html();
+            console.log(type);
+            var boredPull = boredURL + type;
+            console.log(boredPull);
+            $.ajax({
+                url:boredPull,
+                method: "GET",
+            }).then(function(response){
+                console.log(response.activity)
+                $(".types").append("<p id='activity'>" + response.activity + "</p>");
+            })
+
     });
 });
 
