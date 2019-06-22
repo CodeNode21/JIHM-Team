@@ -18,6 +18,8 @@
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     <!-- This is a link for Animate.css -->
     <link rel="stylesheet" href="animate.min.css">
+    <!-- This is link for Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Solid&display=swap" rel="stylesheet">
 
 </head>
 
@@ -31,8 +33,8 @@
             <div class="container" >
 
             <!-- This is the title, we need to center the words -->
-            <h1 class="display-4" id="centered">The Bored Board</h1>
-            <p class="lead" id="centered">What are you going to do with your life? Let's find out!</p>
+            <h1 class="display-4" id="centered">The BoReD BoaRD</h1>
+            <p class="lead" id="centered">What can you do with your life? Let's find out!</p>
 
         </div>
         </div>
@@ -41,13 +43,13 @@
               <form>
                 <!-- This will be the what, aka q/keywords, this will be used to search by any aspect of an event that is not part of the category, location, or time -->
                 <div class="form-group">
-                    <label for="What">What event are you looking for?</label>
+                    <label for="What">Tell us what kind of activity you might like</label>
                     <input type="whatevent" class="form-control" id="what" placeholder="dancing, billiards, biking, etc">
                 </div>
 
                   <!-- This is where the user will enter the zip code -->
                 <div class="form-group">
-                  <label for="Zip Code">Where do you want the event to be?</label>
+                  <label for="Zip Code">Zip Code for your area</label>
                   <input type="zipcode" class="form-control" id="where" placeholder="zip code, region, city">
                   
                   <!-- This will be a comment underneath the zip code entry box -->
@@ -74,12 +76,9 @@
                     </select>
                   </div>
 
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Let's find something to do!</label>
-                </div>
+
                 <!-- create if statement for when label is checked and submit button clicked then initiate bored API -->
-                <button type="submit" id= "button" class="btn btn-primary">Submit</button>
+                <button type="submit" id= "button" class="btn btn-primary">Let's find something to do!</button>
 
                 <!-- <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Random To Do</a> -->
                 
@@ -88,7 +87,7 @@
               <aside>
                   <container>
                     <!-- Results from Bored API will go here -->
-                    <div><button  id="boredAPI" type="submit">or.. Click me for a random activity</button></div>
+                    <div><button  id="boredAPI" class="btn btn-primary" type="submit">or.. Click me for a random activity</button></div>
                     <div class="types"></div>
                   </container>
               </aside>
