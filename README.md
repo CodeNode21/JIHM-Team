@@ -1,5 +1,3 @@
 # JIHM-Team
-Irfan Walele
-Hector Fland
-Team Members
--Mat Bednara
+
+https://codenode21.github.io/JIHM-Team/
