@@ -59,9 +59,9 @@ function eventsToHtml(data){
     
     
     var div = $("<div>");
-    div.html(`<div class='animate slideInRight'>
+    div.html(`<div'>
     <div class="card" "col-4">
-    <div class="card-body" >
+    <div class="card-body animate slideInRight" >
     <img src="${image}" alt="" class="card-image">
     </div>
     <div class="col-4">
@@ -110,7 +110,7 @@ setInterval(time, 1000);
 
 // API Key Name	Keys	Actions
 // BoredBoard
-// HMNEI5LA6MRBDVOWA3
+// HMNEI5LA6MRBDVOWA3f
 // Show client secret and API keys
 // API key details
 // App product page 
@@ -118,7 +118,8 @@ setInterval(time, 1000);
 
 
 // Public API key
-// E35HN42CJGH4744CTNPX
+// G3GKTUWPQMEXOSHPAED4
+
 
 
 // url base :
