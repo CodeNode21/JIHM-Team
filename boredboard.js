@@ -132,7 +132,7 @@ setInterval(time, 1000);
 
 
 // BORED AIP
-var boredURL = "http://www.boredapi.com/api/activity?type=";
+var boredURL = "https://www.boredapi.com/api/activity?type=";
 var activityType = ["education", "recreational", "social", "diy", "charity", "cooking", "relaxation", "music", "busywork"];
 // create a random button as well as buttons for activity types 
 // event listener below. 
