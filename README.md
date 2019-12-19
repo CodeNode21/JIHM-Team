@@ -3,9 +3,8 @@
 The BoredBoard is a fun and easy to use boredom remedy application. 
 Feeling bored or need inspiration to get up and do something?? Check out the BoredBoard and see if it can help.
 Just fill in the lines or simply check out the activity suggestion
+![](boredboardIMG.PNG)
 
-## DEMO
-![BoredBoard GIF](./BoredBoardGIF.gif)
 
 ### Link
 https://codenode21.github.io/TheBoredBoard/
@@ -17,6 +16,9 @@ You can access the app by using the [link](https://codenode21.github.io/TheBored
 This app utilizes two, easy to use and free APIs. 
 * [bored api](https://www.boredapi.com/) 
 * [eventful api](https://api.eventful.com/)
+
+## DEMO
+![BoredBoard GIF](./BoredBoardGIF.gif)
 
 ## Contributors
 
