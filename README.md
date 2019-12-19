@@ -19,9 +19,10 @@ This app utilizes two, easy to use and free APIs.
 * [eventful api](https://api.eventful.com/)
 
 ## Contributors
+```
 * **Mat Bednara**
 * [**Irfan Walele**](https://github.com/irfanwalele) 
-
+```
 
 
 
