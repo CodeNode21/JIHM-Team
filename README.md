@@ -23,7 +23,7 @@ This app utilizes two, easy to use and free APIs.
 
 ## Contributors
 
-* **Mat Bednara**
+* [**Mat Bednara**](https://codenode21.github.io/)
 * [**Irfan Walele**](https://github.com/irfanwalele) 
 
 
